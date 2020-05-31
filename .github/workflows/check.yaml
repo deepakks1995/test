@@ -16,8 +16,4 @@ jobs:
             pwd
             touch /home/runner/work/test/test/out.json
             echo "SECRET_FILE" >> /home/runner/work/test/test/out.json
-            
-            
-      - uses: actions/checkout@v2
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v2
+            cat /home/runner/work/test/test/out.json
