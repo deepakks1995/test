@@ -9,8 +9,11 @@ jobs:
     # This job runs on Linux
     runs-on: ubuntu-latest
     steps:
-        - shell: bash
-          with:
-            SECRET_FILE: ${{ secrets.SECRET_FILE }}
-          run: |
-            echo "$SECRET_FILE"
+      - name: abcd
+        env: 
+          SECRET_FILE: ${{ secrets.SECRET_FILE }}
+        run: |
+            pwd
+            touch out.json
+            echo "$SECRET_FILE" >> out.json
+            cat out.json
