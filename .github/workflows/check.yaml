@@ -13,7 +13,10 @@ jobs:
         env: 
           SECRET_FILE: ${{ secrets.SECRET_FILE }}
         run: |
+            pwd
+            touch out.json
             echo "$SECRET_FILE" >> out.json
+            
       - uses: actions/checkout@v2
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v2
