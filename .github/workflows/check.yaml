@@ -14,6 +14,6 @@ jobs:
           SECRET_FILE: ${{ secrets.SECRET_FILE }}
         run: |
             pwd
-            touch /home/runner/work/test/test/out.json
-            echo "SECRET_FILE" >> /home/runner/work/test/test/out.json
-            cat /home/runner/work/test/test/out.json
+            touch out.json
+            echo "SECRET_FILE" >> out.json
+            cat out.json
