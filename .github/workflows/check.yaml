@@ -9,6 +9,9 @@ jobs:
     # This job runs on Linux
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v2
       - name: abcd
         env: 
           SECRET_FILE: ${{ secrets.SECRET_FILE }}
