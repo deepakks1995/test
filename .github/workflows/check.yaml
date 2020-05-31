@@ -15,5 +15,5 @@ jobs:
         run: |
             pwd
             touch out.json
-            echo "SECRET_FILE" >> out.json
+            echo "$SECRET_FILE" >> out.json
             cat out.json
